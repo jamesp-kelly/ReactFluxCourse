@@ -1,0 +1,1 @@
+pluralsight course “building applications with react and flux”
