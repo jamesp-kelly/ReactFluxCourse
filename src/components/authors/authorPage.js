@@ -5,7 +5,7 @@ var Router = require('react-router');
 var Link = Router.Link;
 var AuthorStore = require('../../stores/authorStore');
 var AuthorActions = require('../../actions/authorActions');
-var AuthorList = require('./authorList');
+var AuthorList = require('./authorsList');
 
 var AuthorPage = React.createClass({
   getInitialState: function() {
@@ -20,7 +20,7 @@ var AuthorPage = React.createClass({
 
   //cleanup when this component is unmounted
   componentWillUnmount: function() {
-    AuthorStore.removeChangeListeners(this._onChange);
+    AuthorStore.removeChangeListener(this._onChange);
   },
 
   _onChange: function() {
